@@ -30,4 +30,13 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(excepted, result);
     }
+
+    @Test
+    public void findByNameTest() {
+        String excepted = "89909919191";
+
+        String result = phoneBook.findByName("Сергей");
+
+        Assertions.assertEquals(excepted, result);
+    }
 }
