@@ -26,6 +26,11 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
+        for (String key : phoneBook.keySet()) {
+            if (key.equals(name)) {
+                return phoneBook.get(name);
+            }
+        }
         return null;
     }
 }
