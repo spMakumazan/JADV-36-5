@@ -1,12 +1,13 @@
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
 
     private final Map<String, String> phoneBook;
 
     public PhoneBook() {
-        phoneBook = new HashMap<>();
+        phoneBook = new TreeMap<>();
     }
 
     public int add(String name, String phone) {
@@ -34,7 +35,7 @@ public class PhoneBook {
         return null;
     }
 
-    public String[] printAllNames() {
-        return null;
+    public List<String> printAllNames() {
+        return phoneBook.keySet().stream().toList();
     }
 }

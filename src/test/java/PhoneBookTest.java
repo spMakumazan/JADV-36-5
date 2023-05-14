@@ -2,6 +2,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class PhoneBookTest {
 
     static PhoneBook phoneBook = new PhoneBook();
@@ -45,9 +48,9 @@ public class PhoneBookTest {
     @Test
     public void printAllNamesTest() {
 
-        String[] excepted = {"Анна", "Игорь", "Сергей"};
+        List<String> excepted = Arrays.asList("Анна", "Игорь", "Сергей");
 
-        String[] result = phoneBook.printAllNames();
+        List<String> result = phoneBook.printAllNames();
 
         Assertions.assertEquals(excepted, result);
     }
