@@ -3,13 +3,16 @@ import java.util.Map;
 
 public class PhoneBook {
 
-    private Map<String, String> phoneBook;
+    private final Map<String, String> phoneBook;
 
     public PhoneBook() {
         phoneBook = new HashMap<>();
     }
 
     public int add(String name, String phone) {
-        return 0;
+        if (!phoneBook.containsKey(name)) {
+            phoneBook.put(name, phone);
+        }
+        return phoneBook.size();
     }
 }
