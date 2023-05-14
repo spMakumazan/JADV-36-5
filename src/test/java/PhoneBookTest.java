@@ -24,6 +24,7 @@ public class PhoneBookTest {
 
     @Test
     public void findByNumberTest() {
+
         String excepted = "Игорь";
 
         String result = phoneBook.findByNumber("89909909090");
@@ -33,10 +34,22 @@ public class PhoneBookTest {
 
     @Test
     public void findByNameTest() {
+
         String excepted = "89909919191";
 
         String result = phoneBook.findByName("Сергей");
 
         Assertions.assertEquals(excepted, result);
     }
+
+    @Test
+    public void printAllNamesTest() {
+
+        String[] excepted = {"Анна", "Игорь", "Сергей"};
+
+        String[] result = phoneBook.printAllNames();
+
+        Assertions.assertEquals(excepted, result);
+    }
+
 }
